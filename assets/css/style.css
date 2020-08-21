@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem;
+}
+
+.page-header .logo {
+    width: 30%;
+}
+
+.page-header .menu {
+    display: flex;
+    justify-content: center;
+}
+
+.page-header .menu .list-menu {
+    display: flex;
+    margin-top: 1.2rem;
+    list-style: none;
+}
+
+.page-header .menu .list-menu .menu-item:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.banner {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/img/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 2rem;
+}
+
+.banner .banner-title {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #fff;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .about-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.about .about-description {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.recipes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe {}
+
+.recipe img {}
+
+.recipe-content {}
+
+.recipe-title {}
+
+.recipe-description {}
+
+.recipe-button {}
