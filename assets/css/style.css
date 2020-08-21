@@ -1,5 +1,9 @@
 /* Mobile First */
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -64,7 +68,7 @@ a {
 
 .about {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     align-items: center;
     text-align: center;
 }
@@ -78,6 +82,7 @@ a {
     text-align: center;
     line-height: 1.6rem;
     margin-bottom: 1rem;
+    max-width: 500px;
 }
 
 .recipes {
@@ -85,6 +90,7 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 0 0.4rem;
 }
 
 .recipe {
@@ -92,7 +98,6 @@ a {
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
-    width: 90%;
 }
 
 .recipe img {
@@ -182,19 +187,53 @@ a {
     color: #fff;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
     #page-header {
         display: grid;
         grid-template-columns: auto 3fr;
     }
     #page-header .menu {
         display: grid;
-        justify-self: end;        
+        justify-self: end;
     }
     #page-header .menu .list-menu {
         margin-top: 0;
     }
-    #page-header .logo{
+    #page-header .logo {
         width: 100%;
+    }
+    .recipes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 0.4rem;
+    }
+    .recipe {
+        width: 100%;
+    }
+    .people {
+        display: grid;        
+        grid-template-columns: repeat(2, 1fr);       
+        column-gap: 6rem;
+    }    
+
+    .people .person:last-child{
+        grid-column: 1/3;
+    }
+}
+
+@media (min-width: 940px) {
+    .recipes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);        
+    }
+    .people {
+        display: grid;        
+        grid-template-columns: repeat(3, 1fr);                
+        gap: 2rem;
+    }
+
+    .people .person:last-child{
+        grid-column: 3/3;
     }
 }
