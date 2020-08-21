@@ -1,3 +1,5 @@
+/* Mobile First */
+
 * {
     padding: 0;
     margin: 0;
@@ -12,7 +14,7 @@ a {
     text-decoration: none;
 }
 
-.page-header {
+#page-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,22 +22,26 @@ a {
     padding: 1.4rem;
 }
 
-.page-header .logo {
+#page-header .logo {
     width: 30%;
 }
 
-.page-header .menu {
+#page-header .menu {
     display: flex;
     justify-content: center;
 }
 
-.page-header .menu .list-menu {
+#page-header .menu .list-menu {
     display: flex;
     margin-top: 1.2rem;
     list-style: none;
 }
 
-.page-header .menu .list-menu .menu-item:not(:last-child) {
+#page-header .menu .list-menu .menu-link {
+    color: #a90329;
+}
+
+#page-header .menu .list-menu :not(:last-child) {
     margin-right: 1rem;
 }
 
@@ -58,36 +64,137 @@ a {
 
 .about {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column;    
     align-items: center;
+    text-align: center;
 }
 
 .about .about-title {
     font-size: 1.4rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
 }
 
 .about .about-description {
     text-align: center;
+    line-height: 1.6rem;
     margin-bottom: 1rem;
 }
 
 .recipes {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.recipe {}
+.recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 90%;
+}
 
-.recipe img {}
+.recipe img {
+    width: 100%;
+}
 
-.recipe-content {}
+.recipe-content {
+    text-align: center;
+    line-height: 1.6rem;
+}
 
-.recipe-title {}
+.recipe-title {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
 
-.recipe-description {}
+.recipe-description {
+    font-size: 1.2rem;
+}
 
-.recipe-button {}
+.recipe-button {
+    border: 0;
+    background: #a90329;
+    color: #fff;
+    font-size: 1.2rem;
+    width: 9.2rem;
+    height: 2.8rem;
+    margin-top: 1rem;
+}
+
+.who-we-are {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.who-we-are-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.who-we-are-description {
+    line-height: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.people {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.person-image {
+    border-radius: 50%;
+    margin: 1.2rem;
+}
+
+.person-name {
+    font-size: 1.8rem;
+    color: #a90329;
+}
+
+.person-work {
+    margin-top: 0.4rem;
+    font-size: 1.2rem;
+}
+
+.page-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a90329;
+    height: 50px;
+}
+
+.page-footer p {
+    color: #fff;
+}
+
+@media (min-width: 700px) {
+    #page-header {
+        display: grid;
+        grid-template-columns: auto 3fr;
+    }
+    #page-header .menu {
+        display: grid;
+        justify-self: end;        
+    }
+    #page-header .menu .list-menu {
+        margin-top: 0;
+    }
+    #page-header .logo{
+        width: 100%;
+    }
+}
